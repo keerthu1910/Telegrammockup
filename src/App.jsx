@@ -1,8 +1,9 @@
+import { Chats } from "./Components"
 
 function App() {
  return (
     <>
-      <h2>Telegram</h2>
+      <Chats />
     </>
   )
 }
