@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.chats-container{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    .new-message{
+        display: none;
+        position:absolute;
+        bottom: 0;
+        left: 18%;
+        bottom: 5%;
+        align-content: center;
+        text-align: center;
+        width:60px;
+        height: 60px;
+        background-color: #24A1DE;
+        border-radius: 30px;
+        &.show{
+            display: block;
+        }
+        img{
+            height: 40px;
+            width: 40px;
+        }
+    }
+    .chats{
+        background-color: white;
+        padding: 10px;
+        .menu-container{
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+          
+            .menu-btn{
+                background: none;
+                border:none;
+            }
+            .search-space{
+                    padding: 12px;
+                    border-radius: 20px;
+                    border:none;
+                &:focus{
+                    outline: none;
+                    border:2px solid #24A1DE !important;
+                }
+            }
+        }
+        .menu-items{
+            display: none;
+            position: absolute;
+            left:5px;
+            border-radius:10px;
+            box-shadow:0 2px 8px 0 rgba(0, 0, 0, 0.2),
+                       0 2px 5px 0 rgba(0, 0, 0, 0.2);
+            margin-inline: 10px;
+            width: 250px;
+            padding: 15px;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter:blur(8px);
+            transform: translateX(2%);
+            transition: transform 0.5ms ease-in-out;
+            &.show{
+                display: block;
+            }
+            .menu-item{
+                list-style: none;
+                padding: 5px;
+                font-family:  "Open Sans", sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+        .chats-display{
+            .contact-card{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin: 5px;
+                width:100%;
+                border-radius: 10px;
+                padding: 5px;
+                &:hover{
+                    background-color: #24A1DE;
+                    color: white;
+                }
+                .contact-img{
+                    background-color: #24A1DE;
+                    color: white;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-family: "Open Sans", sans-serif;
+                }
+                .contact-name{
+                    font-size:16px;
+                    font-weight: 600;
+                    font-family: "Open Sans", sans-serif;
+                }
+            }
+        }
+    }
+    .chats-display-container{
+        background: url('../../assets/Chat_background.png');
+        background-size: cover;
+        border-right: 1px solid lightgray;
+        .chat-top-contact{
+            background-color: white;
+            position: relative;
+            margin: 0;
+            padding: 3px;
+            .contact-card{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin: 3px;
+                width:100%;
+                border-radius: 10px;
+                padding: 5px;
+                .contact-img{
+                    background-color: #24A1DE;
+                    color: white;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-family: "Open Sans", sans-serif;
+                }
+                .contact-name{
+                    font-size:16px;
+                    font-weight: 600;
+                    font-family: "Open Sans", sans-serif;
+                }
+        }
+
+    }
+    .message-container{
+        padding: 30px;
+        
+        .message-left{
+            background-color: white;
+            position: relative;
+            left: 10px;
+            margin-top: 5px;
+            width:50%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .message-right{
+            background-color: white;
+            position: relative;
+            width: 50%;
+            left: 70%;
+            margin-top: 5px;
+            padding:10px;
+            border-radius: 10px;
+            max-width: fit-content;
+        }
+    }
+}
+}
